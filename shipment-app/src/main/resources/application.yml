@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:shipment;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+# Which phase of the cutover the application is running in.
+# DUAL_WRITE_READ_SOURCE -> write both, read source
+# SHADOW_COMPARE         -> write both, read source, compare against target
+# READ_TARGET            -> write both, read target   (last reversible phase)
+# TARGET_ONLY            -> write target only         (no way back)
+migration:
+  phase: SHADOW_COMPARE
+
+logging:
+  level:
+    com.example: INFO
