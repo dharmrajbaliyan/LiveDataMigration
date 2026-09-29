@@ -2,7 +2,7 @@
 
 A working implementation of the dual-write protocol, phased reads and
 compensating rollback described in *Achieving Correctness and Fault Tolerance
-in Large-Scale Data Migrations*.
+in Live Data Migrations*.
 
 Runs with no infrastructure: H2 stands in for the relational source and
 DynamoDB Local runs in-process as the target.

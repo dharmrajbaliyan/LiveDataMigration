@@ -1,2 +1,9 @@
 .gradle/
 build/
+
+# IDE
+.idea/
+*.iml
+
+# DynamoDB Local writes this next to the working directory at runtime
+dynamodb-local-metadata.json
